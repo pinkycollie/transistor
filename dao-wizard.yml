@@ -1,0 +1,25 @@
+name: DAO Creation Wizard Automation
+
+on:
+  workflow_dispatch:
+    inputs:
+      dao_name:
+        description: 'Name of the new DAO'
+        required: true
+      members:
+        description: 'Initial member wallet addresses'
+        required: true
+
+jobs:
+  create-dao:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run DAO Creation Script
+        run: |
+          node scripts/create-dao.js "${{ github.event.inputs.dao_name }}" "${{ github.event.inputs.members }}"
