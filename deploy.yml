@@ -28,6 +28,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Deploy to Hosting
         run: |
-          # Example: Deploy to Vercel/Netlify/your server
-          # vercel --prod
+          # Example: Deploy to your server
+          # example --prod
           echo "Deploy step here"
