@@ -28,8 +28,8 @@ export function createClient() {
   }
 
   return createThirdwebClient({
-    secretKey: secretKey,
-    clientId: clientId,
+    secretKey,
+    clientId,
   });
 }
 
@@ -45,7 +45,7 @@ export function getWalletAccount(client) {
   try {
     return privateKeyToAccount({
       client,
-      privateKey: privateKey,
+      privateKey,
     });
   } catch (error) {
     console.warn("Warning: Invalid WALLET_PRIVATE_KEY format. Transaction signing will not work.");

@@ -104,6 +104,7 @@ app.post("/api/proposals", async (req, res) => {
     addProposal(proposal);
 
     // Webhook notification (if configured)
+    // Note: Uses native fetch available in Node.js 18+ (see package.json engines)
     if (process.env.WEBHOOK_URL) {
       try {
         await fetch(process.env.WEBHOOK_URL, {
