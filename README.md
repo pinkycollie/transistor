@@ -31,8 +31,11 @@ Before running the server, you need to create a Thirdweb account and get your AP
    - Copy your **Client ID** and **Secret Key**
 
 3. **Configure Environment Variables**
-   - Copy or edit the `.env` file in the project root
-   - Add your Thirdweb credentials:
+   - Copy `.env.example` to `.env` in the project root:
+     ```bash
+     cp .env.example .env
+     ```
+   - Edit `.env` and add your Thirdweb credentials:
      ```
      THIRDWEB_CLIENT_ID=your_client_id_here
      THIRDWEB_SECRET_KEY=your_secret_key_here
@@ -44,7 +47,7 @@ Before running the server, you need to create a Thirdweb account and get your AP
      ```
      WALLET_PRIVATE_KEY=0xYourPrivateKey
      ```
-   - ⚠️ **Never commit your private key to version control!**
+   - ⚠️ **Never commit your `.env` file with real credentials!**
 
 ---
 

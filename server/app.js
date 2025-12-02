@@ -14,9 +14,15 @@ import express from "express";
 import dotenv from "dotenv";
 import { addProposal, getProposals } from "./store.js";
 import { initializeThirdweb } from "./thirdweb.js";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
-// Load environment variables
-dotenv.config({ path: "../.env" });
+// Get directory name for ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load environment variables from project root
+dotenv.config({ path: join(__dirname, "../.env") });
 
 const app = express();
 const PORT = process.env.PORT || 4000;

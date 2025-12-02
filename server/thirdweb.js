@@ -14,6 +14,9 @@
 import { createThirdwebClient, defineChain, getContract } from "thirdweb";
 import { privateKeyToAccount } from "thirdweb/wallets";
 
+// Placeholder values that indicate unconfigured state
+const PLACEHOLDER_PRIVATE_KEY = "0xYourPrivateKey";
+
 // Initialize Thirdweb client with your credentials
 export function createClient() {
   const secretKey = process.env.THIRDWEB_SECRET_KEY;
@@ -34,7 +37,7 @@ export function createClient() {
 export function getWalletAccount(client) {
   const privateKey = process.env.WALLET_PRIVATE_KEY;
   
-  if (!privateKey || privateKey === "0xYourPrivateKey") {
+  if (!privateKey || privateKey === PLACEHOLDER_PRIVATE_KEY) {
     console.warn("Warning: WALLET_PRIVATE_KEY is not configured. Transaction signing will not work.");
     return null;
   }

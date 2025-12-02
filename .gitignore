@@ -1,7 +1,8 @@
 # Dependencies
 node_modules/
 
-# Environment files (keep .env.example for reference)
+# Environment files with real credentials
+.env
 .env.local
 .env.*.local
 
