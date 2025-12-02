@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment files with secrets (keep template .env)
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Lock files (optional - remove if you want to track them)
+package-lock.json
