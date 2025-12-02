@@ -1,0 +1,25 @@
+{
+  "name": "ssa-transistor-dao-demo",
+  "version": "1.0.0",
+  "description": "Simple SSA Transistor DAO Demo with Thirdweb integration",
+  "main": "app.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "keywords": [
+    "dao",
+    "thirdweb",
+    "web3",
+    "transistor"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "thirdweb": "^5.0.0",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1"
+  }
+}
