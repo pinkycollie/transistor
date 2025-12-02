@@ -1,11 +1,10 @@
 // In-memory store for proposals (MVP)
 const proposals = [];
 
-function addProposal(p) {
+export function addProposal(p) {
   proposals.push(p);
 }
-function getProposals() {
+
+export function getProposals() {
   return proposals;
 }
-
-module.exports = { addProposal, getProposals };
